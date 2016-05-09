@@ -10,10 +10,3 @@ r{r_},
 g{g_},
 b{b_}{}
 
-color& color::operator=(color const& c)
-{
-	r=c.r;
-	b=c.b;
-	g=c.g;
-	return *this;
-}
