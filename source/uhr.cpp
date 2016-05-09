@@ -42,9 +42,9 @@ int main(int argc, char* argv[])
 
     winkel=M_PI*2/60;
 
-    win.draw_line(0.5,0.5,0.5+sin(winkel*sek)*0.5,0.5+cos(winkel*sek)*0.5,0.0f,0.0f,0.0f); //Sekundenzeiger
-    win.draw_line(0.5,0.5,0.5+sin(winkel*min)*0.3,0.5+cos(winkel*min)*0.3,0.0f,0.0f,0.0f); //Minutenzeiger
-    win.draw_line(0.5,0.5,0.5+sin(winkel*hour)*0.2,0.5+cos(winkel*hour)*0.2,0.0f,0.0f,0.0f); //Stundenzeiger
+    win.draw_line(0.5,0.5,0.5+sin(winkel*sek)*0.4,0.5+cos(winkel*sek)*0.4,0.0f,0.0f,0.0f); //Sekundenzeiger
+    win.draw_line(0.5,0.5,0.5+sin(winkel*min)*0.2,0.5+cos(winkel*min)*0.2,0.0f,0.0f,0.0f); //Minutenzeiger
+    win.draw_line(0.5,0.5,0.5+sin(winkel*hour)*0.1,0.5+cos(winkel*hour)*0.1,0.0f,0.0f,0.0f); //Stundenzeiger
 
     win.update();
  }

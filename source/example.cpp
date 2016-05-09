@@ -1,12 +1,13 @@
 #include "window.hpp"
 #include <utility>
 #include <cmath>
+#include <vector>
 #include "vec2.hpp"
 #include "mat2.hpp"
 #include "circle.hpp"
 #include "rectangle.hpp"
 #include "color.hpp"
-#include <vector>
+
 
 int main(int argc, char* argv[])
 {
@@ -41,18 +42,18 @@ int main(int argc, char* argv[])
     farb[0]={0,0,0};
 
     auto m = win.mouse_position();
-    Vec2 maus{m.first,m.second};
+    Vec2 mouse{m.first,m.second};
 
     for (unsigned int i=0;i<kreis.size();i++)
         {
-            if(kreis[i].isInside(maus) )
+            if(kreis[i].isInside(mouse) )
 		{
 			kreis[i].fill(win,farb[0]);
 		}
         }
     for (unsigned int i=0;i<rechteck.size();i++)
         {
-            if(rechteck[i].isInside(maus) )
+            if(rechteck[i].isInside(mouse) )
 		{
 			rechteck[i].fill(win,farb[0]);
 			//rechteck[i].fill(win,farb[1])

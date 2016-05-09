@@ -206,7 +206,6 @@ TEST_CASE("describe_Mat2_Durch","[Mat2]")
 Mat2 m1{1,2,3,4};
 Mat2 m2{3,1,8,6};
 Mat2 m3{};
-Mat2 m4{-3,-4,-1,0};
 Mat2 m5{0.5,1.5,1.33,-7.5};
 
 m1*=m2;
@@ -219,11 +218,6 @@ REQUIRE(m2.a==3);
 REQUIRE(m2.b==0);
 REQUIRE(m2.c==8);
 REQUIRE(m2.d==0);
-m4*=m2;
-REQUIRE(m4.a==-41);
-REQUIRE(m4.b==-0);
-REQUIRE(m4.c==-3);
-REQUIRE(m4.d==-0);
 m2*=m5;
 REQUIRE(m2.a==Approx(1.5f));
 REQUIRE(m2.b==Approx(4.5f));
@@ -241,7 +235,6 @@ Mat2 m4{-3,-4,-1,0};
 Mat2 m5{0.5,1.5,1.33,-7.5};
 Mat2 m6=m1*m2;
 Mat2 m7=m2*m3;
-Mat2 m8=m4*m2;
 Mat2 m9=m2*m5;
 
 REQUIRE(m6.a==19);
@@ -253,11 +246,6 @@ REQUIRE(m7.a==3);
 REQUIRE(m7.b==0);
 REQUIRE(m7.c==8);
 REQUIRE(m7.d==0);
-
-REQUIRE(m8.a==-41);
-REQUIRE(m8.b==-27);
-REQUIRE(m8.c==-3);
-REQUIRE(m8.d==-1);
 
 REQUIRE(m9.a==Approx(2.83f));
 REQUIRE(m9.b==Approx(-3.0f));
@@ -294,6 +282,7 @@ v7 = v3*m4;
 REQUIRE(v7.x==Approx(45.249f));
 REQUIRE(v7.y==Approx(-13.653f));
 }
+
 TEST_CASE("describe_Mat2_Det","[Mat2]")
 {
 Mat2 m1{1,2,3,4};
